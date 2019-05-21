@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.quiddichcounter_udacityproject2.MainActivity">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight=".25"
+        android:src="@drawable/harrrybroom"/>
+
+
+
+
+  <TableLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight=".75"
+      android:gravity="center_vertical"
+      android:stretchColumns="1"
+
+     >
+      <!-- Row of team names/-->
+      <TableRow
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:padding="4dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:gravity="center"
+                android:text="@string/team_one"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
+
+
+          <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight=".5"
+              android:gravity="center"
+              android:text="@string/team_two"
+              android:textSize="24sp"
+              android:textStyle="bold"/>
+
+      </TableRow>
+
+      <!-- Row of team points/-->
+      <TableRow>
+          <TextView
+              android:id="@+id/team_one_points_tv"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight=".5"
+              android:gravity="center"
+              android:text="@string/points"
+              android:textColor="@color/colorPrimaryDark"
+              android:textSize="30sp"
+              android:textStyle="bold"/>
+          <TextView
+              android:id="@+id/team_two_points_tv"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight=".5"
+              android:gravity="center"
+              android:text="@string/points"
+              android:textColor="@color/colorPrimaryDark"
+              android:textSize="30sp"
+              android:textStyle="bold"/>
+      </TableRow>
+      <!-- Row for quaffle score/-->
+      <TableRow
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:padding="8dp">
+          <Button
+              android:id="@+id/team_one_quaffle_button"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight=".3"
+              android:background="@color/colorAccent"
+              android:text="@string/quaffle"
+              />
+          <ImageView
+              android:layout_width="0dp"
+              android:layout_height="50dp"
+              android:layout_weight=".2"
+              android:src="@drawable/quaffle"
+              />
+          <Button
+              android:id="@+id/team_two_quaffle_button"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight=".3"
+              android:background="@color/colorAccent"
+              android:text="@string/quaffle"
+              />
+      </TableRow>
+
+      <!-- Row for snitch score - ends game./-->
+       <TableRow
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:padding="8dp">
+           <Button
+               android:id="@+id/team_one_snitch_button"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight=".3"
+               android:background="@color/colorAccent"
+               android:text="@string/snitch"
+               />
+           <ImageView
+               android:layout_width="0dp"
+               android:layout_height="50dp"
+               android:layout_weight=".2"
+               android:src="@drawable/snitch"/>
+
+           <Button
+               android:id="@+id/team_two_snitch_button"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight=".3"
+               android:background="@color/colorAccent"
+               android:text="@string/snitch"
+               />
+       </TableRow>
+
+  </TableLayout>
+
+    <TextView
+        android:id="@+id/game_over_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:visibility="invisible"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:textSize="30sp"
+        android:text="@string/game_over"/>
+
+<Button
+    android:id="@+id/reset_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginBottom="32dp"
+    android:background="@color/colorAccent"
+    android:text="@string/reset"/>
+
+</LinearLayout>
+
